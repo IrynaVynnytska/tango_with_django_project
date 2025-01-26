@@ -60,7 +60,7 @@ MEDIA_ROOT = MEDIA_DIR
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATE_DIR, STATIC_DIR],
+        'DIRS': [TEMPLATE_DIR, STATIC_DIR, MEDIA_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
