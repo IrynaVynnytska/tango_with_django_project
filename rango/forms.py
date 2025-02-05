@@ -21,10 +21,10 @@ class PageForm(forms.ModelForm):
 
     def clean(self):
         clean_data = self.cleaned_data
-        url = cleaned_data.get('url')
+        url = self.cleaned_data.get('url')
 
         if url and not url.startswith('http://'):
             url = f'http:/{url}'
-            cleaned_data['url'] = url
+            self.cleaned_data['url'] = url
         
-        return cleaned_data
+        return self.cleaned_data
