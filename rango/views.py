@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from rango.models import Category
 from rango.models import Page
+from rango.forms import CategoryForm
+from django.shortcuts import redirect
 
 def index(request):
     # Query the database for a list of ALL categories currently stored.
@@ -40,3 +42,20 @@ def show_category(request, category_name_slug):
         context_dict['pages'] = None
 
     return render(request, 'rango/category.html', context = context_dict)
+
+def add_category(request):
+    form = CategoryForm()
+
+#did the user submit data into the form 
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit=True)
+            return redirect('/rango/')
+        
+        else:
+            print(form.errors)
+
+    return render(request, 'rango/add_category.html', {'form': form})
+
