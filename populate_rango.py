@@ -11,39 +11,39 @@ def populate():
         {'title': 'Official Python Tutorial',
         'url':'http://docs.python.org/3/tutorial/',
         'likes': 0,
-        'views': 0},
+        'views': 2344},
         {'title':'How to Think like a Computer Scientist',
         'url':'http://www.greenteapress.com/thinkpython/',
             'likes': 0,
-        'views': 0},
+        'views': 5677},
         {'title':'Learn Python in 10 Minutes',
         'url':'http://www.korokithakis.net/tutorials/python/',
         'likes': 0,
-        'views': 0} ]
+        'views': 876} ]
     
     django_pages = [
         {'title':'Official Django Tutorial',
         'url':'https://docs.djangoproject.com/en/2.1/intro/tutorial01/',
         'likes': 0,
-        'views': 0},
+        'views': 345},
         {'title':'Django Rocks',
         'url':'http://www.djangorocks.com/',
         'likes': 0,
-        'views': 0},
+        'views': 7665},
         {'title':'How to Tango with Django',
         'url':'http://www.tangowithdjango.com/',
         'likes': 0,
-        'views': 0} ]
+        'views': 3445} ]
 
     other_pages = [
         {'title':'Bottle',
         'url':'http://bottlepy.org/docs/dev/',
         'likes': 0,
-        'views': 0},
+        'views': 34},
         {'title':'Flask',
         'url':'http://flask.pocoo.org',
         'likes': 0,
-        'views': 0} ]
+        'views': 1203} ]
 
     cats = {
         'Python': {'pages': python_pages, "views": 128, "likes": 64},
